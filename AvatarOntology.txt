@@ -1,0 +1,30 @@
+@prefix : <https://github.com/JokerFelix/MasterThesisCode/AvatarOntology> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Define Classes 
+:Avatar rdf:type rdfs:Class .
+
+:AvatarHuman rdfs:subClassOf :Avatar .
+:AvatarNonHuman rdfs:subClassOf :Avatar .
+
+:Human rdf:type rdfs:Class .
+:NonHuman rdf:type rdfs:Class .
+:Sign rdf:type rdfs:Class .
+
+# Define Properties for Aggregation
+:includesHuman rdf:type rdf:Property ;
+    rdfs:domain :AvatarNonHuman ;
+    rdfs:range :Human .
+
+:includesSignForHuman rdf:type rdf:Property ;
+    rdfs:domain :AvatarHuman ;
+    rdfs:range :Sign .
+
+:includesSignForNonHuman rdf:type rdf:Property ;
+    rdfs:domain :AvatarNonHuman ;
+    rdfs:range :Sign .
+
+:includesNonHuman rdf:type rdf:Property ;
+    rdfs:domain :AvatarHuman ;
+    rdfs:range :NonHuman .
