@@ -2,3 +2,7 @@ thesisenv
 TrainTestData/
 yolov7/runs/
 yolov7*/*traced_model.pt*
+yolov7Base/runs/
+yolov7Base*/*traced_model.pt*
+yolov7NoSign/runs/
+yolov7NoSign*/*traced_model.pt*
