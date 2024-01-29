@@ -13,6 +13,7 @@ print(data.head())
 
 print("\nShow summary stats: ")
 print(data.describe())
+print(data.describe().to_latex())
 
 print("\nShow missing values: ")
 print(data.isnull().sum())
